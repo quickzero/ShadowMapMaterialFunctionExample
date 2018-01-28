@@ -22,3 +22,22 @@ Material Function, material with ShadowMapMultiply recive shadow;
 1.Shadow Mapping depth comparison.<br>
 2.Shadow Map Antialiasing by Percentage-Closer Filtering.<br>
 3.Pack depth float into a RGBA render target texture, compatible with older mobile device.<br>
+
+Number of Blueprints: 1<br>
+Number of C++ Classes: 5<br>
+Supported Devlopment Platforms:Win64, macOS<br>
+Supported Target Build Platforms: Win32, Win64, macOS, iOS, Android<br>
+
+# Quickstart:
+1.Create a map which have a DirectionalLight.<br>
+2.Add ShadowCaptureBP to scene.<br>
+3.Attach CastShadowMapComponent to Actors which cast shadow.<br>
+4.Attach ShadowMapTargetComponent to Actor which be followed by ShadowCaptureBP.<br>
+5.Add ShadowMapMultiply node in material which recive shadow, it should be the final node before Base Color.<br>
+
+# Note:
+When deploy on iOS, please modify r.MetalVertexParameterSize and r.MetalPixelParameterSize to 100.<br>
+Location is Window -> Developer Tools -> Device Profiles -> iOS.<br>
+After modity values, Press Save as Default.<br>
+
+
