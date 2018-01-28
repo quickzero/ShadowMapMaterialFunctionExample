@@ -1,4 +1,5 @@
 # ShadowMapMaterialFunction
+![image](https://github.com/quickzero/ShadowMapMaterialFunctionExample/blob/master/Featured%20Image_01.jpg)
 
 The Plugin provides MaterialFunction which draw dynamic shadow, it is the solution of dynamic shadow without Mobile HDR on iOS and Android, for example GoogleVR Project must disable Mobile HDR.
 
@@ -34,10 +35,12 @@ Supported Target Build Platforms: Win32, Win64, macOS, iOS, Android<br>
 3.Attach CastShadowMapComponent to Actors which cast shadow.<br>
 4.Attach ShadowMapTargetComponent to Actor which be followed by ShadowCaptureBP.<br>
 5.Add ShadowMapMultiply node in material which recive shadow, it should be the final node before Base Color.<br>
+![image](https://github.com/quickzero/ShadowMapMaterialFunctionExample/blob/master/MaterialEditor.jpg)
 
 # Note:
 When deploy on iOS, please modify r.MetalVertexParameterSize and r.MetalPixelParameterSize to 100.<br>
 Location is Window -> Developer Tools -> Device Profiles -> iOS.<br>
 After modity values, Press Save as Default.<br>
+![image](https://github.com/quickzero/ShadowMapMaterialFunctionExample/blob/master/Note_01.jpg)
 
 
