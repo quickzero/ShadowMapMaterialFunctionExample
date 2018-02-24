@@ -6,11 +6,11 @@ The Plugin provides MaterialFunction which draw dynamic shadow, it is the soluti
 This dynamic shadow system have much better performance than UE4 default on mobile device.
 
 # Content:
-ShadowCaptureBP :<br>
+ShadowCapture :<br>
 Blueprint Actor, place to scene to capture depth of Actors with CastShadowMapComponent, follows location of ShadowMapTargetComponent and rotation of DirectionalLight.
 
 ShadowMapTargetComponent :<br>
-Component, ShadowCaptureBP follows location of ShadowMapTargetComponent.
+Component, ShadowCapture follows location of ShadowMapTargetComponent.
 
 CastShadowMapComponent :<br>
 Component, Actor with this component cast shadow.
@@ -31,9 +31,9 @@ Supported Target Build Platforms: Win32, Win64, macOS, iOS, Android<br>
 
 # Quickstart:
 1.Create a map which have a DirectionalLight.<br>
-2.Add ShadowCaptureBP to scene.<br>
+2.Add ShadowCapture to scene.<br>
 3.Attach CastShadowMapComponent to Actors which cast shadow.<br>
-4.Attach ShadowMapTargetComponent to Actor which be followed by ShadowCaptureBP.<br>
+4.Attach ShadowMapTargetComponent to Actor which be followed by ShadowCapture.<br>
 5.Add ShadowMapMultiply node in material which recive shadow, it should be the final node before Base Color.<br>
 ![image](https://github.com/quickzero/ShadowMapMaterialFunctionExample/blob/master/MaterialEditor.jpg)
 
