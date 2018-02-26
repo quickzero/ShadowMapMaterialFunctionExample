@@ -35,6 +35,10 @@
 			"Name": "ShadowMapMaterialFunction",
 			"Enabled": true,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/f5446eb658e54e0ab17387b18604baa2"
+		},
+		{
+			"Name": "GoogleVRHMD",
+			"Enabled": true
 		}
 	]
 }
