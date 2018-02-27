@@ -19,7 +19,6 @@ ShadowMapMultiply :<br>
 Material Function, material with ShadowMapMultiply recive shadow;
 
 # Features:
-
 1.Shadow Mapping depth comparison.<br>
 2.Shadow Map Antialiasing by Percentage-Closer Filtering.<br>
 3.Pack depth float into a RGBA render target texture, compatible with older mobile device.<br>
@@ -31,7 +30,13 @@ Supported Target Build Platforms: Win32, Win64, macOS, iOS, Android<br>
 
 # Quickstart:
 1.Create a map which have a DirectionalLight.<br>
-2.Add ShadowCapture to scene.<br>
+2.Add ShadowCapture to scene and edit ShadowCapture propertys.<br>
+  Shadow Map Size : Set shadow resolution.<br>
+  Shadow Region Size : Set area size effected by Shadow.<br>
+  Shadow Color : Set shadow color.<br>
+  Direct Light : Select DirectionalLight referenced by ShadowCapture, or ShadowCapture find first DirectionalLight.<br>
+![image](https://github.com/quickzero/ShadowMapMaterialFunctionExample/blob/master/ShadowCaptureParameter.jpg)
+
 3.Attach CastShadowMapComponent to Actors which cast shadow.<br>
 4.Attach ShadowMapTargetComponent to Actor which be followed by ShadowCapture.<br>
 5.Add ShadowMapMultiply node in material which recive shadow, it should be the final node before Base Color.<br>
