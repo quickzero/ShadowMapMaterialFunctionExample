@@ -31,10 +31,10 @@ Supported Target Build Platforms: Win32, Win64, macOS, iOS, Android<br>
 # Quickstart:
 1.Create a map which have a DirectionalLight.<br>
 2.Add ShadowCapture to scene and edit ShadowCapture propertys.<br>
-  Shadow Map Size : Set shadow resolution.<br>
-  Shadow Region Size : Set area size effected by Shadow.<br>
-  Shadow Color : Set shadow color.<br>
-  Direct Light : Select DirectionalLight referenced by ShadowCapture, or ShadowCapture find first DirectionalLight.<br>
+    Shadow Map Size : Set shadow resolution.<br>
+    Shadow Region Size : Set area size effected by Shadow.<br>
+    Shadow Color : Set shadow color.<br>
+    Direct Light : Select DirectionalLight referenced by ShadowCapture, or ShadowCapture find first DirectionalLight.<br>
 ![image](https://github.com/quickzero/ShadowMapMaterialFunctionExample/blob/master/ShadowCaptureParameter.jpg)
 
 3.Attach CastShadowMapComponent to Actors which cast shadow.<br>
