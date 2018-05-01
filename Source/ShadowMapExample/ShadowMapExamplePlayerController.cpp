@@ -5,6 +5,7 @@
 #include "Runtime/Engine/Classes/Components/DecalComponent.h"
 #include "HeadMountedDisplayFunctionLibrary.h"
 #include "ShadowMapExampleCharacter.h"
+#include "Engine/World.h"
 
 AShadowMapExamplePlayerController::AShadowMapExamplePlayerController()
 {
