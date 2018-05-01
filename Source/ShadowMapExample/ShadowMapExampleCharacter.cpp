@@ -8,7 +8,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/PlayerController.h"
 #include "GameFramework/SpringArmComponent.h"
-#include "Kismet/HeadMountedDisplayFunctionLibrary.h"
+#include "HeadMountedDisplayFunctionLibrary.h"
 #include "Materials/Material.h"
 
 AShadowMapExampleCharacter::AShadowMapExampleCharacter()

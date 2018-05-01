@@ -3,7 +3,7 @@
 #include "ShadowMapExamplePlayerController.h"
 #include "AI/Navigation/NavigationSystem.h"
 #include "Runtime/Engine/Classes/Components/DecalComponent.h"
-#include "Kismet/HeadMountedDisplayFunctionLibrary.h"
+#include "HeadMountedDisplayFunctionLibrary.h"
 #include "ShadowMapExampleCharacter.h"
 
 AShadowMapExamplePlayerController::AShadowMapExamplePlayerController()
