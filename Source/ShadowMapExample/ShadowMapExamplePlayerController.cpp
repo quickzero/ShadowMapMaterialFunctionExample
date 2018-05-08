@@ -6,6 +6,7 @@
 #include "HeadMountedDisplayFunctionLibrary.h"
 #include "ShadowMapExampleCharacter.h"
 #include "Engine/World.h"
+#include "../../../UE_4.18/Engine/Source/Runtime/UMG/Public/Components/Button.h"
 
 AShadowMapExamplePlayerController::AShadowMapExamplePlayerController()
 {
@@ -111,3 +112,4 @@ void AShadowMapExamplePlayerController::OnSetDestinationReleased()
 	// clear flag to indicate we should stop updating the destination
 	bMoveToMouseCursor = false;
 }
+

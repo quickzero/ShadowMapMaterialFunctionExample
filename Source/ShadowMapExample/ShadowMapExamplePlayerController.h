@@ -6,6 +6,8 @@
 #include "GameFramework/PlayerController.h"
 #include "ShadowMapExamplePlayerController.generated.h"
 
+class UButton;
+
 UCLASS()
 class AShadowMapExamplePlayerController : public APlayerController
 {
@@ -38,6 +40,7 @@ protected:
 	/** Input handlers for SetDestination action. */
 	void OnSetDestinationPressed();
 	void OnSetDestinationReleased();
+
 };
 
 
