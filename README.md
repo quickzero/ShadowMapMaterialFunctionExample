@@ -14,7 +14,7 @@ Android Benchmark APK:
 https://drive.google.com/open?id=1JgTWAChTGT1hW9mpTMeCEMTcM4koefh6
 
 # Content:
-ShadowCapture :<br>
+ShadowCaptureBP :<br>
 Blueprint Actor, place to scene to capture shadow, follows location of [ShadowMapTargetComponent], X-axis of ShadowCaptureBP is virtual light direction.
 
 ShadowMapTargetComponent :<br>
