@@ -42,8 +42,12 @@ Supported Target Build Platforms: Win32, Win64, macOS, iOS, Android<br>
 * Shadow Map Size : Set shadow resolution.
 * Shadow Region Size : Set area size effected by Shadow.
 * Shadow Color : Set shadow color.
-* Direct Light : Select DirectionalLight referenced by ShadowCapture, or ShadowCapture find first DirectionalLight.
+* Direct Light : Select DirectionalLight referenced by ShadowCapture, ShadowCapture will follow rotation of DirectionalLight;
 ![image](https://github.com/quickzero/ShadowMapMaterialFunctionExample/blob/master/ShadowCaptureParameter.jpg)
+
+* Auto Find Direct Light : If Direct Light is null, find a DirectionalLight in the world.
+* Lock World Location of Pixel : Decrease shake of static static shadow caster.
+* Force Pack RGB : Use RGBA format shadow map replace R32F format.
 
 3. Attach CastShadowMapComponent to Actors which cast shadow.
 4. Attach ShadowMapTargetComponent to Actor which be followed by ShadowCapture.
