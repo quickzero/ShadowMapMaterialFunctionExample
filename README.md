@@ -1,13 +1,21 @@
 # ShadowMapMaterialFunction
 ![image](https://github.com/quickzero/ShadowMapMaterialFunctionExample/blob/master/Featured%20Image_01.jpg)
 
-The Plugin provides MaterialFunction which draw dynamic shadow, it is the solution of dynamic shadow without Mobile HDR on iOS and Android, for example GoogleVR Project must disable Mobile HDR.
+Independent shadow system, draw dynamic shadow by material function without light.
+Work well without [Mobile HDR], [Mobile HDR] is necessary for [Modulated Shadows] of UE4.
+Work well with [GoogleVR], [GoogleVR] must disable [Mobile HDR].
+Enable [Mobile HDR] is OK.
+Shadow caster can recive shadow. (Self Shadow)
+Good performance for slower mobile device.
+Good compatibility for old mobile device.
+Supported Windows, Mac, iOS and Android.
 
-This dynamic shadow system have much better performance than UE4 default on mobile device.
+Android Benchmark APK:
+https://drive.google.com/open?id=1JgTWAChTGT1hW9mpTMeCEMTcM4koefh6
 
 # Content:
 ShadowCapture :<br>
-Blueprint Actor, place to scene to capture depth of Actors with CastShadowMapComponent, follows location of ShadowMapTargetComponent and rotation of DirectionalLight.
+Blueprint Actor, place to scene to capture shadow, follows location of [ShadowMapTargetComponent], X-axis of ShadowCaptureBP is virtual light direction.
 
 ShadowMapTargetComponent :<br>
 Component, ShadowCapture follows location of ShadowMapTargetComponent.
