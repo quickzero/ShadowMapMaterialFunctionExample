@@ -42,7 +42,7 @@ Supported Target Build Platforms: Win32, Win64, macOS, iOS, Android<br>
 * Shadow Map Size : Set shadow resolution.
 * Shadow Region Size : Set area size effected by Shadow.
 * Shadow Color : Set shadow color.
-* Direct Light : Select DirectionalLight referenced by ShadowCapture, ShadowCapture will follow rotation of DirectionalLight;
+* Direct Light : Select DirectionalLight referenced by ShadowCapture, ShadowCapture will follow rotation of DirectionalLight;<br>
 ![image](https://github.com/quickzero/ShadowMapMaterialFunctionExample/blob/master/ShadowCaptureParameter.jpg)
 
 * Auto Find Direct Light : If Direct Light is null, find a DirectionalLight in the world.
