@@ -44,7 +44,7 @@ Supported Target Build Platforms: Win32, Win64, macOS, iOS, Android<br>
 * Shadow Color : Set shadow color.
 * Direct Light : Select DirectionalLight referenced by ShadowCapture, ShadowCapture will follow rotation of DirectionalLight.
 * Auto Find Direct Light : If Direct Light is null, find a DirectionalLight in the world.
-* Lock World Location of Pixel : Decrease shake of static static shadow caster.
+* Lock World Location of Pixel : Decrease shake of static shadow caster.
 * Force Pack RGB : Use RGBA format shadow map replace R32F format.<br>
 ![image](https://github.com/quickzero/ShadowMapMaterialFunctionExample/blob/master/ShadowCaptureParameter.jpg)
 <br><br>
