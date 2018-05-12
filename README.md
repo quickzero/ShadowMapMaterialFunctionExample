@@ -1,14 +1,14 @@
 # ShadowMapMaterialFunction
 ![image](https://github.com/quickzero/ShadowMapMaterialFunctionExample/blob/master/Featured%20Image_01.jpg)
 
-Independent shadow system, draw dynamic shadow by material function without light.
-Work well without [Mobile HDR], [Mobile HDR] is necessary for [Modulated Shadows] of UE4.
-Work well with [GoogleVR], [GoogleVR] must disable [Mobile HDR].
-Enable [Mobile HDR] is OK.
-Shadow caster can recive shadow. (Self Shadow)
-Good performance for slower mobile device.
-Good compatibility for old mobile device.
-Supported Windows, Mac, iOS and Android.
+* Independent shadow system, draw dynamic shadow by material function without light.
+* Work well without [Mobile HDR], [Mobile HDR] is necessary for [Modulated Shadows] of UE4.
+* Work well with [GoogleVR], [GoogleVR] must disable [Mobile HDR].
+* Enable [Mobile HDR] is OK.
+* Shadow caster can recive shadow. (Self Shadow)
+* Good performance for slower mobile device.
+* Good compatibility for old mobile device.
+* Supported Windows, Mac, iOS and Android.
 
 Android Benchmark APK:
 https://drive.google.com/open?id=1JgTWAChTGT1hW9mpTMeCEMTcM4koefh6
