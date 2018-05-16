@@ -1,11 +1,36 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "MainUI.h"
+#include "ConstructorHelpers.h"
+#include "PanelWidget.h"
+#include "ButtonEX.h"
+#include "TextBlock.h"
+#include <stdlib.h>
 
 
 UMainUI::UMainUI(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
-	ConstructorHelpers::FClassFinder finder("Blueprint'/Game/TopDownCPP/Blueprints/NPC_SPAWNER.NPC_SPAWNER'");
-	if(finder.Succeeded())
-		_NPCSpawnerClass = finder.Class;
+}
+
+void UMainUI::InitialCountButtons(UPanelWidget* parent)
+{
+	if(!parent)
+		return;
+
+	for(int i = 0; i < parent->GetChildrenCount(); ++i)
+	{
+		UButtonEX* button = Cast<UButtonEX>(parent->GetChildAt(i));
+		if(!button)
+			continue;
+
+		UTextBlock* textBlock = Cast<UTextBlock>(button->GetChildAt(0));
+		if(!textBlock)
+			continue;
+
+		int count = FCString::Atoi(*textBlock->Text.ToString());
+		button->_OnClicked_Lambda = [=]()
+		{
+			SpawnNPC(count);
+		};
+	}
 }

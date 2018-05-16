@@ -17,7 +17,7 @@ public:
 
 protected:
 	UFUNCTION()
-	void Do();
+	void DoClicked();
 	
 public:
 	std::function<void()> _OnClicked_Lambda;
