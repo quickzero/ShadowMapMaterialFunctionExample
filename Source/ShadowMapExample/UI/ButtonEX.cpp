@@ -10,7 +10,6 @@ UButtonEX::UButtonEX()
 
 void UButtonEX::DoClicked()
 {
-	UE_LOG(LogTemp, Warning, TEXT("UButtonEX::DoClick"));
 	if(_OnClicked_Lambda)
 		_OnClicked_Lambda();
 }
