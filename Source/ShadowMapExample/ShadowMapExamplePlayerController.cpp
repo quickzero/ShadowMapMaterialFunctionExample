@@ -1,12 +1,13 @@
 // Copyright 1998-2017 Epic Games, Inc. All Rights Reserved.
 
 #include "ShadowMapExamplePlayerController.h"
-#include "AI/Navigation/NavigationSystem.h"
+#include "Runtime/NavigationSystem/Public/NavigationSystem.h"
 #include "Runtime/Engine/Classes/Components/DecalComponent.h"
 #include "HeadMountedDisplayFunctionLibrary.h"
 #include "ShadowMapExampleCharacter.h"
 #include "Engine/World.h"
-#include "../../../UE_4.18/Engine/Source/Runtime/UMG/Public/Components/Button.h"
+#include "Components/Button.h"
+#include "Blueprint/AIBlueprintHelperLibrary.h"
 
 AShadowMapExamplePlayerController::AShadowMapExamplePlayerController()
 {
@@ -53,7 +54,8 @@ void AShadowMapExamplePlayerController::MoveToMouseCursor()
 		{
 			if (MyPawn->GetCursorToWorld())
 			{
-				UNavigationSystem::SimpleMoveToLocation(this, MyPawn->GetCursorToWorld()->GetComponentLocation());
+				//UNavigationSystemV1::SimpleMoveToLocation(this, MyPawn->GetCursorToWorld()->GetComponentLocation());
+				UAIBlueprintHelperLibrary::SimpleMoveToLocation(this, MyPawn->GetCursorToWorld()->GetComponentLocation());
 			}
 		}
 	}
@@ -90,14 +92,18 @@ void AShadowMapExamplePlayerController::SetNewMoveDestination(const FVector Dest
 	APawn* const MyPawn = GetPawn();
 	if (MyPawn)
 	{
-		UNavigationSystem* const NavSys = GetWorld()->GetNavigationSystem();
-		float const Distance = FVector::Dist(DestLocation, MyPawn->GetActorLocation());
+		//UNavigationSystem* const NavSys = Cast<UNavigationSystem>(GetWorld()->GetNavigationSystem());
+		//float const Distance = FVector::Dist(DestLocation, MyPawn->GetActorLocation());
 
-		// We need to issue move command only if far enough in order for walk animation to play correctly
-		if (NavSys && (Distance > 120.0f))
-		{
-			NavSys->SimpleMoveToLocation(this, DestLocation);
-		}
+		//// We need to issue move command only if far enough in order for walk animation to play correctly
+		//if (NavSys && (Distance > 120.0f))
+		//{
+		//	NavSys->SimpleMoveToLocation(this, DestLocation);
+		//}
+
+		float const Distance = FVector::Dist(DestLocation, MyPawn->GetActorLocation());
+		if(Distance > 120.0f)
+			UAIBlueprintHelperLibrary::SimpleMoveToLocation(this, DestLocation);
 	}
 }
 
