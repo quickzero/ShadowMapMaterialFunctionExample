@@ -8,6 +8,6 @@ public class ShadowMapExample : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "AIModule", "HeadMountedDisplay", "ShadowMapMaterialFunction", "UMG" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "Slate","SlateCore", "InputCore", "AIModule", "HeadMountedDisplay", "ShadowMapMaterialFunction", "UMG" });
 	}
 }
