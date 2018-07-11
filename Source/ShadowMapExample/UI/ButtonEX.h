@@ -14,6 +14,7 @@ class SHADOWMAPEXAMPLE_API UButtonEX : public UButton
 	
 public:
 	UButtonEX();
+	virtual ~UButtonEX(){}
 
 protected:
 	UFUNCTION()
