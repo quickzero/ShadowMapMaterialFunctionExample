@@ -37,7 +37,7 @@ Supported Devlopment Platforms:Win64, macOS<br>
 Supported Target Build Platforms: Win32, Win64, macOS, iOS, Android<br>
 
 # Quickstart:
-1. Create a map which have a DirectionalLight.
+1. Create a map which have a DirectionalLight.Disable [Cast Dynamic Shadows] in DirectionalLight;
 2. Add ShadowCapture to scene and edit ShadowCapture propertys.
 * Shadow Map Quality : Set shadow map resolution.
 * Shadow Region Size : Set area size effected by Shadow.
