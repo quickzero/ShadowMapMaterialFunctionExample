@@ -28,6 +28,7 @@ protected:
 	/** Resets HMD orientation in VR. */
 	void OnResetVR();
 
+	void SimpleMoveToLocation(AController* Controller, const FVector& GoalLocation);
 	/** Navigate player to the current mouse cursor location. */
 	void MoveToMouseCursor();
 

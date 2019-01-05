@@ -1,13 +1,20 @@
 // Copyright 1998-2017 Epic Games, Inc. All Rights Reserved.
 
 #include "ShadowMapExamplePlayerController.h"
-#include "Runtime/NavigationSystem/Public/NavigationSystem.h"
 #include "Runtime/Engine/Classes/Components/DecalComponent.h"
 #include "HeadMountedDisplayFunctionLibrary.h"
 #include "ShadowMapExampleCharacter.h"
 #include "Engine/World.h"
 #include "Components/Button.h"
 #include "Blueprint/AIBlueprintHelperLibrary.h"
+
+#include "Runtime/Launch/Resources/Version.h"
+#if (ENGINE_MAJOR_VERSION == 4 && ENGINE_MINOR_VERSION > 19)
+#include "Runtime/NavigationSystem/Public/NavigationSystem.h"
+#else
+#include "AI/Navigation/NavigationSystem.h"
+#endif
+
 
 AShadowMapExamplePlayerController::AShadowMapExamplePlayerController()
 {
@@ -46,6 +53,15 @@ void AShadowMapExamplePlayerController::OnResetVR()
 	UHeadMountedDisplayFunctionLibrary::ResetOrientationAndPosition();
 }
 
+void AShadowMapExamplePlayerController::SimpleMoveToLocation(AController* Controller, const FVector& GoalLocation)
+{
+#if (ENGINE_MAJOR_VERSION == 4 && ENGINE_MINOR_VERSION > 19)
+	UAIBlueprintHelperLibrary::SimpleMoveToLocation(Controller, GoalLocation);
+#else
+	UNavigationSystem::SimpleMoveToLocation(Controller, GoalLocation);
+#endif
+}
+
 void AShadowMapExamplePlayerController::MoveToMouseCursor()
 {
 	if (UHeadMountedDisplayFunctionLibrary::IsHeadMountedDisplayEnabled())
@@ -54,8 +70,7 @@ void AShadowMapExamplePlayerController::MoveToMouseCursor()
 		{
 			if (MyPawn->GetCursorToWorld())
 			{
-				//UNavigationSystemV1::SimpleMoveToLocation(this, MyPawn->GetCursorToWorld()->GetComponentLocation());
-				UAIBlueprintHelperLibrary::SimpleMoveToLocation(this, MyPawn->GetCursorToWorld()->GetComponentLocation());
+				SimpleMoveToLocation(this, MyPawn->GetCursorToWorld()->GetComponentLocation());
 			}
 		}
 	}
@@ -103,7 +118,7 @@ void AShadowMapExamplePlayerController::SetNewMoveDestination(const FVector Dest
 
 		float const Distance = FVector::Dist(DestLocation, MyPawn->GetActorLocation());
 		if(Distance > 120.0f)
-			UAIBlueprintHelperLibrary::SimpleMoveToLocation(this, DestLocation);
+			SimpleMoveToLocation(this, DestLocation);
 	}
 }
 
